@@ -1,0 +1,7 @@
+@inproceedings{
+  bao2024insert,
+  title={InsertNeRF: Instilling Generalizability into NeRF with HyperNet Modules},
+  author={Yanqi Bao and Tianyu Ding and Jing Huo and Wenbin Li and Yuxin Li and Yang Gao},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2024},
+}
