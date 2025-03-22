@@ -1,0 +1,8 @@
+@InProceedings{pmlr-v162-zhou22c,
+  title={On the Optimization Landscape of Neural Collapse under {MSE} Loss: Global Optimality with Unconstrained Features},
+  author={Zhou, Jinxin and Li, Xiao and Ding, Tianyu and You, Chong and Qu, Qing and Zhu, Zhihui},
+  booktitle={Proceedings of the 39th International Conference on Machine Learning},
+  pages={27179--27202},
+  year={2022}
+}
+

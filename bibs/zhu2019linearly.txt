@@ -1,0 +1,6 @@
+@article{zhu2019linearly,
+  title={A linearly convergent method for non-smooth non-convex optimization on the grassmannian with applications to robust subspace and dictionary learning},
+  author={Zhu, Zhihui and Ding, Tianyu and Robinson, Daniel and Tsakiris, Manolis and Vidal, Ren{\'e}},
+  journal={Advances in Neural Information Processing Systems},
+  year={2019}
+}

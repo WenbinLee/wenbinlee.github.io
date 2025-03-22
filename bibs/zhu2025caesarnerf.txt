@@ -1,0 +1,8 @@
+@inproceedings{zhu2025caesarnerf,
+  title={Caesarnerf: Calibrated semantic representation for few-shot generalizable neural rendering},
+  author={Zhu, Haidong and Ding, Tianyu and Chen, Tianyi and Zharkov, Ilya and Nevatia, Ram and Liang, Luming},
+  booktitle={European Conference on Computer Vision},
+  pages={71--89},
+  year={2025},
+  organization={Springer}
+}

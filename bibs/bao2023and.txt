@@ -1,0 +1,8 @@
+@inproceedings{bao2023and,
+  title={Where and how: Mitigating confusion in neural radiance fields from sparse inputs},
+  author={Bao, Yanqi and Li, Yuxin and Huo, Jing and Ding, Tianyu and Liang, Xinyue and Li, Wenbin and Gao, Yang},
+  booktitle={Proceedings of the 31st ACM International Conference on Multimedia},
+  publisher = {Association for Computing Machinery},
+  pages={2180--2188},
+  year={2023}
+}
