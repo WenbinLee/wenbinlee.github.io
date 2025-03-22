@@ -1,7 +1,0 @@
-@inproceedings{ding2021hyper,
-  title={Dual principal component pursuit for learning a union of hyperplanes: Theory and algorithms},
-  author={Ding, Tianyu and Zhu, Zhihui and Tsakiris, Manolis and Vidal, Rene and Robinson, Daniel},
-  booktitle={International Conference on Artificial Intelligence and Statistics},
-  pages={2944--2952},
-  year={2021}
-}

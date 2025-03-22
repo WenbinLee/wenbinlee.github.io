@@ -1,7 +1,0 @@
-@inproceedings{
-    ge2024safe,
-    title={Safe and Robust Subgame Exploitation in Imperfect Information Games},
-    author={Zhenxing Ge and Zheng Xu and Tianyu Ding and Linjian Meng and Bo An and Wenbin Li and Yang Gao},
-    booktitle={Forty-first International Conference on Machine Learning},
-    year={2024},
-}

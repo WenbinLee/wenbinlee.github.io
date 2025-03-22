@@ -1,7 +1,0 @@
-@inproceedings{ding2019noisy,
-  title={Noisy Dual Principal Component Pursuit.},
-  author={Ding, Tianyu and Zhu, Zhihui and Ding, Tianjiao and Yang, Yunchen and Robinson, Daniel P and Tsakiris, Manolis C and Vidal, Ren{\'e}},
-  booktitle={Proceedings of the 36th International Conference on Machine Learning},
-  pages={1617--1625},
-  year={2019}
-}

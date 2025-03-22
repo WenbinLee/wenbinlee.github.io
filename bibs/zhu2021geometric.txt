@@ -1,7 +1,0 @@
-@article{zhu2021geometric,
-  title={A geometric analysis of neural collapse with unconstrained features},
-  author={Zhu, Zhihui and Ding, Tianyu and Zhou, Jinxin and Li, Xiao and You, Chong and Sulam, Jeremias and Qu, Qing},
-  journal={Advances in Neural Information Processing Systems},
-  pages={29820--29834},
-  year={2021}
-}

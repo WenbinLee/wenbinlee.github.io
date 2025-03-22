@@ -1,7 +1,0 @@
-@InProceedings{Geng_2022_CVPR,
-    author    = {Geng, Zhicheng and Liang, Luming and Ding, Tianyu and Zharkov, Ilya},
-    title     = {RSTT: Real-Time Spatial Temporal Transformer for Space-Time Video Super-Resolution},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    year      = {2022},
-    pages     = {17441-17451}
-}

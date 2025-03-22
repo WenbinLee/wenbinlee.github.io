@@ -1,7 +1,0 @@
-@article{bao20253d,
-  title={3d gaussian splatting: Survey, technologies, challenges, and opportunities},
-  author={Bao, Yanqi and Ding, Tianyu and Huo, Jing and Liu, Yaoli and Li, Yuxin and Li, Wenbin and Gao, Yang and Luo, Jiebo},
-  journal={IEEE Transactions on Circuits and Systems for Video Technology},
-  year={2025},
-  publisher={IEEE}
-}

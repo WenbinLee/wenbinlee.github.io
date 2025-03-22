@@ -1,7 +1,0 @@
-@inproceedings{
-    ge2023efficient,
-    title={Efficient Subgame Refinement for Extensive-form Games},
-    author={Zhenxing Ge and Zheng Xu and Tianyu Ding and Wenbin Li and Yang Gao},
-    booktitle={Thirty-seventh Conference on Neural Information Processing Systems},
-    year={2023},
-}

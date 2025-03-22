@@ -1,7 +1,0 @@
-@article{chen2021only,
-  title={Only train once: A one-shot neural network training and pruning framework},
-  author={Chen, Tianyi and Ji, Bo and Ding, Tianyu and Fang, Biyi and Wang, Guanyi and Zhu, Zhihui and Liang, Luming and Shi, Yixin and Yi, Sheng and Tu, Xiao},
-  journal={Advances in Neural Information Processing Systems},
-  pages={19637--19651},
-  year={2021}
-}
