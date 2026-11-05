@@ -221,7 +221,7 @@
   
   .profile-image {
     flex: 1;
-    text-align: center;
+    text-align: left;
   }
   
   .profile-photo {
@@ -254,7 +254,7 @@
   @media (max-width: 768px) {
     .profile-container {
       flex-direction: column-reverse;
-      text-align: center;
+      text-align: left;
     }
     
     .profile-image {
@@ -292,7 +292,7 @@
     margin-top: 20px;
     padding: 10px 0;
     border-top: 1px solid #eaeaea;
-    text-align: center;
+    text-align: left;
     font-size: 0.9em;
     color: #777;
   }
@@ -513,7 +513,7 @@
   /* Cluster map container */
   #clustrmaps-container {
     margin: 10px auto;
-    text-align: center;
+    text-align: left;
   }
   
   /* Remove empty div space */
@@ -630,6 +630,104 @@
     padding: 0 !important;
     box-shadow: none !important;
   }
+  #open-source-projects {
+    margin-top: 24px;
+  }
+
+  .project-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+    align-items: stretch;
+    gap: 12px;
+    margin: 8px auto 14px;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    min-width: 0;
+    gap: 6px;
+    padding: 9px;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+    border: 1px solid #dce4ed;
+    border-radius: 10px;
+    background: #f7faff;
+    color: #20334d;
+    text-decoration: none;
+  }
+
+  .project-card:hover, .project-card:focus-within {
+    border-color: #426ea3;
+    background: #edf4ff;
+  }
+
+  .project-tag {
+    margin-top: auto;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: #e1ebf8;
+    font-size: 0.8em;
+  }
+
+  .project-cover {
+    display: block;
+    width: 100%;
+  }
+
+  .project-cover img {
+    display: block;
+    width: 85%;
+    margin-inline: auto;
+    height: 88px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 6px;
+  }
+
+  .project-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .project-links a {
+    display: inline-block;
+    padding: 3px 6px;
+    border: 1px solid #b9cde4;
+    border-radius: 6px;
+    background: #fff;
+  }
+
+  body, body p, body li, .project-card {
+    text-align: left;
+  }
+
+
+
+.awards-list li{margin-bottom:0.75em;line-height:1.5}.award-chinese{display:inline-block;color:#666;font-size:0.95em}.publication-resources{margin:3px 0 7px}.resource-unavailable:disabled{background:#eee;color:#777;cursor:not-allowed}.publication-resources a.button{font-weight:normal!important}
+
+/* Comfortable spacing within wrapped bilingual news items. */
+ul.news-list li { line-height: 1.65; margin-bottom: 0.55em; }
+
+.project-card { padding: 12px; font-size: 0.92rem; }
+.project-cover img { height: 112px; }
+.social-links { line-height: 1.8; overflow-wrap: anywhere; }
+.social-links a { display: inline-block; }
+@media (max-width: 640px) {
+ .project-grid { gap: 8px; }
+ .project-card { padding: 8px; font-size: 0.85rem; }
+ .project-cover img { height: 80px; }
+ .project-links { gap: 4px; }
+}
+@media (max-width: 420px) {
+ .project-cover img { height: 112px; }
+}
+.social-second-row { display: inline-block; white-space: nowrap; }
 </style>
 
 <body>
@@ -641,7 +739,6 @@
       <a href="#bio">Biography</a>
       <a href="#publications">Publications</a>
       <a href="#preprints">Preprints</a>
-      <a href="#datasets">Datasets</a>
       <a href="#mentoring">Students</a>
       <a href="#teaching">Teaching</a>
       <a href="#awards">Awards</a>
@@ -672,7 +769,8 @@
                 <a href="https://github.com/WenbinLee"><span style="color:purple">Github</span></a> |
                 <a href="https://github.com/RL-VIG"><span style="color:purple">Github-VIG</span></a> |
                 <a href="https://github.com/RL-MIND"><span style="color:purple">Github-MIND</span></a> |
-                <a href="https://huggingface.co/RL-MIND"><span style="color:purple">HuggingFace-MIND</span></a>
+                <span class="social-second-row"><a href="https://huggingface.co/RL-MIND"><span style="color:purple">HuggingFace</span></a> |
+                <a href="https://www.modelscope.cn/organization/RL-MIND"><span style="color:purple">ModelScope</span></a></span>
             </div>
         </p>
     </div>
@@ -684,17 +782,17 @@
 
 <h2 id="bio">Biography</h2>
 
-<p style="text-align:justify; text-justify:inter-ideograph;">I am currently a Tenure-Track Associate Professor of <a href="https://is.nju.edu.cn/main.htm" target="_blank"> School of Intelligence Science and Technology</a> at <a href="http://www.nju.edu.cn/" target="_blank">Nanjing University</a> and a member of <a href="https://cs.nju.edu.cn/rl/" target="_blank">Reasoning and Learning Research Group</a>, led by Prof. <a href="https://cs.nju.edu.cn/gaoyang">Yang Gao</a>.
+<p style="text-align: left;">I am currently a Tenure-Track Associate Professor of <a href="https://is.nju.edu.cn/main.htm" target="_blank"> School of Intelligence Science and Technology</a> at <a href="http://www.nju.edu.cn/" target="_blank">Nanjing University</a> and a member of <a href="https://cs.nju.edu.cn/rl/" target="_blank">Reasoning and Learning Research Group</a>, led by Prof. <a href="https://cs.nju.edu.cn/gaoyang">Yang Gao</a>.
 
 I received my Ph.D. degree in <a href="http://cs.nju.edu.cn/" target="_blank">School of Computer Science</a> in December 2019 from <a href="https://www.nju.edu.cn/EN/">Nanjing University</a>. I visited the <a href="http://www.cs.rochester.edu/u/jluo/#VISTA">VIStA</a> group from December 2017 to June 2019 at the <a href="https://www.rochester.edu">University of Rochester</a>, under the supervision of Prof. <a href="http://www.cs.rochester.edu/u/jluo/">Jiebo Luo</a>.</p>
 
 
 <h2 id="bio">Research Interests</h2>
 
-<p style=text-align:justify>My research interests encompass, <br>
-<li style=text-align:justify><b>Brain-inspired Artificial Intelligence:</b> I am particularly focused on few-shot concept learning, continual learning, and brain-inspired cognitive computation models, aiming to advance human-level cognitive intelligence. </li>
-<li style=text-align:justify><b>Efficient Generative AI System:</b> My attention is directed towards hardware-software codesign, model compression, LLM quantization, machine learning compilation, and their practical applications in generative AI models for robotics. </li>
-<li style=text-align:justify><b>Multimodal Foundation Models:</b> In addition, I also have a broad interest in multimodal foundation models, model merging, multi-modal reasoning, as well as the deployment and acceleration of large-scale models on edge devices.</li><p>
+<p style="text-align: left">My research interests encompass, <br>
+<li style="text-align: left"><b>Brain-inspired Artificial Intelligence:</b> I am particularly focused on few-shot concept learning, continual learning, and brain-inspired cognitive computation models, aiming to advance human-level cognitive intelligence. </li>
+<li style="text-align: left"><b>Efficient Generative AI System:</b> My attention is directed towards hardware-software codesign, model compression, LLM quantization, machine learning compilation, and their practical applications in generative AI models for robotics. </li>
+<li style="text-align: left"><b>Multimodal Foundation Models:</b> In addition, I also have a broad interest in multimodal foundation models, model merging, multi-modal reasoning, as well as the deployment and acceleration of large-scale models on edge devices.</li><p>
 
 
 
@@ -796,6 +894,76 @@ I received my Ph.D. degree in <a href="http://cs.nju.edu.cn/" target="_blank">Sc
 
 
 
+
+  <h2 id="open-source-projects">Open Source Projects</h2>
+  <div class="project-grid">
+    <article class="project-card">
+      <a class="project-cover" href="https://github.com/RL-VIG/LibFewShot" aria-label="LibFewShot on GitHub">
+        <img src="img/LibFewShot-icon.svg" alt="Two examples per class in a support set help classify a query" loading="lazy" decoding="async">
+      </a>
+      <strong>LibFewShot</strong>
+      <span>A library for training and benchmarking few-shot learning methods.</span>
+      <span class="project-tag">Few-shot Learning</span>
+      <div class="project-links">
+        <a href="https://github.com/RL-VIG/LibFewShot" aria-label="LibFewShot code on GitHub">GitHub</a>
+        <a href="https://arxiv.org/abs/2109.04898" aria-label="LibFewShot on arXiv">arXiv</a>
+      </div>
+    </article>
+    <article class="project-card">
+      <a class="project-cover" href="https://github.com/RL-MIND/LibContinual" aria-label="LibContinual on GitHub">
+        <img src="img/LibContinual-icon.svg" alt="Three sequential tasks add new classes while retaining earlier ones" loading="lazy" decoding="async">
+      </a>
+      <strong>LibContinual</strong>
+      <span>A framework for implementing and evaluating continual learning methods.</span>
+      <span class="project-tag">Continual Learning</span>
+      <div class="project-links">
+        <a href="https://github.com/RL-MIND/LibContinual" aria-label="LibContinual code on GitHub">GitHub</a>
+        <a href="https://arxiv.org/abs/2512.22029" aria-label="LibContinual on arXiv">arXiv</a>
+      </div>
+    </article>
+    <article class="project-card">
+      <a class="project-cover" href="https://github.com/RL-MIND/Harness-Continual-Learning" aria-label="Harness Continual Learning on GitHub">
+        <img src="img/HarnessContinualLearning.png" alt="" loading="lazy" decoding="async">
+      </a>
+      <strong>Harness CL</strong>
+      <span>Continual adaptation for agents by updating their harnesses beyond model parameters.</span>
+      <span class="project-tag">Agent continual learning</span>
+      <div class="project-links">
+        <a href="https://github.com/RL-MIND/Harness-Continual-Learning" aria-label="Harness Continual Learning code on GitHub">GitHub</a>
+        <a href="https://arxiv.org/abs/2608.19013" aria-label="Harness Continual Learning on arXiv">arXiv</a>
+      </div>
+    </article>
+    <article class="project-card">
+      <a class="project-cover" href="https://huggingface.co/datasets/RL-MIND/RSHR-Bench" aria-label="RSHR-Bench on Hugging Face">
+        <img src="img/RSHR-Bench.png" alt="RSHR-Bench project illustration" loading="lazy" decoding="async">
+      </a>
+      <strong>RSHR-Bench</strong>
+      <span>A remote sensing benchmark with images up to 300 megapixels, spanning single-image, multi-image, and multi-turn understanding and reasoning.</span>
+      <span class="project-tag">Remote Sensing Benchmark</span>
+      <div class="project-links"><a href="https://huggingface.co/datasets/RL-MIND/RSHR-Bench">Hugging Face</a><a href="https://arxiv.org/abs/2512.17319">arXiv</a></div>
+    </article>
+    <article class="project-card">
+      <a class="project-cover" href="https://huggingface.co/RL-MIND/UHR-BAT" aria-label="UHR-BAT on Hugging Face">
+        <img src="img/UHR-BAT.png" alt="UHR-BAT project illustration" loading="lazy" decoding="async">
+      </a>
+      <strong>UHR-BAT</strong>
+      <span>A budget-aware vision-language model preserving tiny, query-critical evidence through multi-scale token selection and region-faithful compression.</span>
+      <span class="project-tag">Budget-aware VLM</span>
+      <div class="project-links"><a href="https://huggingface.co/RL-MIND/UHR-BAT">Hugging Face</a><a href="https://arxiv.org/abs/2604.13565">arXiv</a></div>
+    </article>
+    <article class="project-card">
+      <a class="project-cover" href="https://huggingface.co/datasets/RL-MIND/NJU-HARD" aria-label="NJU-HARD on Hugging Face">
+        <img src="img/NJU-HARD.png" alt="NJU-HARD project illustration" loading="lazy" decoding="async">
+      </a>
+      <strong>NJU-HARD</strong>
+      <span>An ultra-high-resolution aerial dataset supporting object detection, object tracking, and visual question answering.</span>
+      <span class="project-tag">Ultra-high-resolution Dataset</span>
+      <div class="project-links"><a href="https://huggingface.co/datasets/RL-MIND/NJU-HARD">Hugging Face</a><a href="https://arxiv.org/pdf/2609.18210">arXiv</a></div>
+    </article>
+    </div>
+
+
+
 <h2 id="preprints">Selected Preprints</h2>
 <ol forward>
 
@@ -804,511 +972,234 @@ I received my Ph.D. degree in <a href="http://cs.nju.edu.cn/" target="_blank">Sc
         <span style="display: block; height: 5px;"></span>
         Borui Kang, Jinrui Gu, Junhan Lv, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Lei Wang, Yang Gao.<br>
         arXiv:2608.19013, 2026 <br>
-  </li>
+  <div class="publication-resources"><button class="button button4 resource-unavailable" type="button" disabled title="No formal publication version (preprint)">PDF</button> <a class="button button4" href="https://github.com/RL-MIND/Harness-Continual-Learning">Code</a> <a class="button button4" href="https://arxiv.org/abs/2608.19013">arXiv</a></div>
+</li>
 
   <li>
         <a href='https://arxiv.org/pdf/2608.27518'>When Muon Meets Task Interference: A Spectral Perspective on Continual Learning and Model Merging</a > <br>
         <span style="display: block; height: 5px;"></span>
         Shangge Liu, Yuehan Yin, Yinghuan Shi, Lei Wang, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>.<br>
         arXiv:2608.27518, 2026 <br>
-  </li>
+  <div class="publication-resources"><button class="button button4 resource-unavailable" type="button" disabled title="No formal publication version (preprint)">PDF</button> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public Code link found">Code</button> <a class="button button4" href="https://arxiv.org/abs/2608.27518">arXiv</a></div>
+</li>
 
   <li>
         <a href='https://arxiv.org/pdf/2512.22029'>LibContinual: A Comprehensive Library towards Realistic Continual Learning</a > <br>
         <span style="display: block; height: 5px;"></span>
         <strong>Wenbin Li</strong>, Shangge Liu, Borui Kang, Yiyang Chen, KaXuan Lew, Yang Chen, Yinghuan Shi, Lei Wang, Yang Gao, Jiebo Luo.<br>
         arXiv:2512.22029, 2026 <br>
-  </li>
+  <div class="publication-resources"><button class="button button4 resource-unavailable" type="button" disabled title="No formal publication version (preprint)">PDF</button> <a class="button button4" href="https://github.com/RL-MIND/LibContinual">Code</a> <a class="button button4" href="https://arxiv.org/abs/2512.22029">arXiv</a></div>
+</li>
 
   <li>
         <a href='https://arxiv.org/pdf/2609.18210'>Understanding Dynamic Scenes at Gigapixel Scale: Wide-Area Spatio-Temporal Perception from UAVs</a > <br>
         <span style="display: block; height: 5px;"></span>
         Yuhang Zhu, Meiyi Zhu, Yunkai Dang, Zhangnan Li, Yuxuan Wang, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Hongbing Pan.<br>
         arXiv:2609.18210, 2026<br>
-  </li>
+  <div class="publication-resources"><button class="button button4 resource-unavailable" type="button" disabled title="No formal publication version (preprint)">PDF</button> <a class="button button4" href="https://huggingface.co/datasets/RL-MIND/NJU-HARD">HuggingFace</a> <a class="button button4" href="https://arxiv.org/abs/2609.18210">arXiv</a></div>
+</li>
 
   <li>
         <a href='https://arxiv.org/abs/2512.17319'>A Benchmark for Ultra-High-Resolution Remote Sensing MLLMs</a > <br>
         <span style="display: block; height: 5px;"></span>
         Yunkai Dang, Meiyi Zhu, Donghao Wang, Yizhuo Zhang, Jiacheng Yang, Qi Fan, Yuekun Yang, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, <br>Feng Miao, Yang Gao.<br>
         arXiv:2512.17319, 2025 <br>
-  </li>
+  <div class="publication-resources"><button class="button button4 resource-unavailable" type="button" disabled title="No formal publication version (preprint)">PDF</button> <a class="button button4" href="https://huggingface.co/datasets/RL-MIND/RSHR-Bench">HuggingFace</a> <a class="button button4" href="https://arxiv.org/abs/2512.17319">arXiv</a></div>
+</li>
 
 </ol>
 
 
 
 
-<h2 id="publications">Selected Journal Publications</h2>
+<h2 id="publications">Selected Journal Publications <a href="publications.html#journals">[Full Publications]</a></h2>
 ( <sup style="font-size: 15px;">#</sup> indicates equal contribution, <sup style="font-size: 15px;">*</sup> indicates corresponding authorship)
 <ol forward="">
 
     <li>
-      <a href='https://arxiv.org/abs/2404.08016'>ONNXPruner: ONNX-Based General Model Pruning Adapter</a> <br>
+      <a href="https://ieeexplore.ieee.org/document/10938408/">ONNXPruner: ONNX-Based General Model Pruning Adapter</a> <br>
       <span style="display: block; height: 5px;"></span>
       Dongdong Ren, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Tianyu Ding, Lei Wang, Qi Fan, Jing Huo, Hongbing Pan, and Yang Gao.<br>
       <span style="color: #E74C3C">IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>), 2025. (IF = 18.6)</span> <br>
-      <button class="button button4"><a href="https://arxiv.org/abs/2404.08016">arXiv</a></button><button class="button button4"><a href="https://github.com/RL-VIG/ONNXPruner.git">Code</a></button>
-    </li>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/10938408/">PDF</a> <a class="button button4" href="https://github.com/RL-VIG/ONNXPruner">Code</a> <a class="button button4" href="https://arxiv.org/abs/2404.08016">arXiv</a></div>
+</li>
 
-   <li>
-      <a href='https://ieeexplore.ieee.org/document/10908464?source=authoralert'>Leveraging Frequency Analysis for Image Denoising Network Pruning</a> <br>
-      <span style="display: block; height: 5px;"></span>
-      Dongdong Ren, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Tianyu Ding, Jing Huo, Lei Wang, Hongbing Pan, and Yang Gao.<br>
-      <span style="color: #E74C3C">IEEE Transactions on Image Processing (<strong>TIP</strong>), 2025. (IF = 13.7)</span> <br>
-      <button class="button button4"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10908464">PDF</a></button>
-      <button class="button button4"><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10908464">arXiv</a></button>
-    </li>
 
   <li>
-      <a href="https://arxiv.org/abs/2109.04898">LibFewShot: A Comprehensive Library for Few-shot Learning</a> <br>
+      <a href="https://ieeexplore.ieee.org/document/10239698">LibFewShot: A Comprehensive Library for Few-shot Learning</a> <br>
       <span style="display: block; height: 5px;"></span>
       <strong>Wenbin Li</strong>, Ziyi Wang, Xuesong Yang, Chuanqi Dong, Pinzhuo Tian, Tiexin Qin, Jing Huo, Yinghuan Shi, Lei Wang, Yang Gao and Jiebo Luo.<br>
       <span style="color: #E74C3C">IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>), 2023. (IF = 18.6)</span> <br>
-      <button class="button button4"><a href="https://arxiv.org/abs/2109.04898">PDF</a></button>
-      <button class="button button4"><a href="https://github.com/RL-VIG/LibFewShot.git">Code</a></button>
-      <button class="button button4"><a href="https://arxiv.org/abs/2109.04898">arXiv</a></button>
- </li>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/10239698">PDF</a> <a class="button button4" href="https://github.com/RL-VIG/LibFewShot">Code</a> <a class="button button4" href="https://arxiv.org/abs/2109.04898">arXiv</a></div>
+</li>
   <li>
       <a href="https://ieeexplore.ieee.org/document/9916072">Defensive Few-shot Learning</a> <br>
       <span style="display: block; height: 5px;"></span>
       <strong>Wenbin Li</strong>, Lei Wang, Xingxing Zhang, Lei Qi, Jing Huo, Yang Gao, Jiebo Luo.<br>
       <span style="color: #E74C3C">IEEE Transactions on Pattern Analysis and Machine Intelligence (<strong>TPAMI</strong>), 2023. (IF = 18.6) </span> <br>
-      <button class="button button4"><a href="https://ieeexplore.ieee.org/document/9916072">PDF</a></button>
-      <button class="button button4"><a href="https://github.com/WenbinLee/DefensiveFSL.git">Code</a></button>
-      <button class="button button4"><a href="https://ieeexplore.ieee.org/document/9916072">arXiv</a></button>
-   </li>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/9916072">PDF</a> <a class="button button4" href="https://github.com/WenbinLee/DefensiveFSL">Code</a> <a class="button button4" href="https://arxiv.org/abs/1911.06968">arXiv</a></div>
+</li>
   <li>
-       <a href="https://openreview.net/pdf?id=MR4glug5GU">Trip-ROMA: Self-Supervised Learning with Triplets and Random Mappings</a> <br>
+       <a href="https://openreview.net/forum?id=MR4glug5GU">Trip-ROMA: Self-Supervised Learning with Triplets and Random Mappings</a> <br>
        <span style="display: block; height: 5px;"></span>
        <strong>Wenbin Li</strong>, Xuesong Yang, Meihao Kong, Lei Wang, Jing Huo, Yang Gao and Jiebo Luo.<br>
        <span style="color: #E74C3C">Transactions on Machine Learning Research (<strong>TMLR</strong>), 2023</span> <br>
-       <button class="button button4"><a href="https://openreview.net/pdf?id=MR4glug5GU">PDF</a></button>
-       <button class="button button4"><a href="https://github.com/WenbinLee/Trip-ROMA.git">Code</a></button>
-    </li>
+  <div class="publication-resources"><a class="button button4" href="https://openreview.net/forum?id=MR4glug5GU">PDF</a> <a class="button button4" href="https://github.com/WenbinLee/Trip-ROMA">Code</a> <a class="button button4" href="https://arxiv.org/abs/2107.10419">arXiv</a></div>
+</li>
 
     <li>
-      <a href="https://ieeexplore.ieee.org/document/9928295/authors#authors">A Multilayer Framework for Online Metric Learning</a> <br>
+      <a href="https://ieeexplore.ieee.org/document/9928295">A Multilayer Framework for Online Metric Learning</a> <br>
       <span style="display: block; height: 5px;"></span>
       <strong>Wenbin Li</strong>, Yanfang Liu, Jing Huo, Yinghuan Shi, Yang Gao, Lei Wang, Jiebo Luo.<br>
       <span style="color: #E74C3C">IEEE Transactions on Neural Networks and Learning Systems (<strong>TNNLS</strong>), 2023. (IF = 8.9)</span> <br>
-      <button class="button button4"><a href="https://ieeexplore.ieee.org/document/9928295/authors#authors">PDF</a></button>
-   </li>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/9928295">PDF</a> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public Code link found">Code</button> <a class="button button4" href="https://arxiv.org/abs/1805.05510">arXiv</a></div>
+</li>
 
 </ol>
 
 
 
-<h2>Selected Conference Publications</h2>
+<h2>Selected Conference Publications <a href="publications.html#conferences">[Full Publications]</a></h2>
 ( <sup style="font-size: 15px;">#</sup> indicates equal contribution, <sup style="font-size: 15px;">*</sup> indicates corresponding authorship)
 <ol  forward=""> 
 
 
   <li>
-    <a href='https://eccv.ecva.net/'>HART: High-Resolution Annotation-Free Reasoning Technique through a Closed-loop Framework</a> <br>
+    <a href="https://link.springer.com/chapter/10.1007/978-3-032-37550-6_23">HART: High-Resolution Annotation-Free Reasoning Technique through a Closed-loop Framework</a> <br>
     <span style="display: block; height: 5px;"></span>
     Jiacheng Yang, Anqi Chen, Yunkai Dang, Qi Fan, Cong Wang, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Feng Miao, Yang Gao.
     <span style="color: #E74C3C">European Conference on Computer Vision (<strong>ECCV</strong>), 2026. (AC Rate = 27.5%) <br>
-  </li>
+  <div class="publication-resources"><a class="button button4" href="https://link.springer.com/chapter/10.1007/978-3-032-37550-6_23">PDF</a> <a class="button button4" href="https://github.com/RL-MIND/HART">Code</a> <a class="button button4" href="https://arxiv.org/abs/2602.23615">arXiv</a></div>
+</li>
 
 
   <li>
-    <a href='https://eccv.ecva.net/'>SEERBench: A Spatial Ego-Exo Reasoning Benchmark for MLLMs with a Simple Yet Effective Baseline</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Fengyuan Lu, Jiahe Feng, Zhengyang Zhou, Shaofeng Zhang, <strong>Wenbin Li</strong>, Qi Fan, Yang Gao.
-    <span style="color: #E74C3C">European Conference on Computer Vision (<strong>ECCV</strong>), 2026. (AC Rate = 27.5%) <br>
-  </li>
-
-
-  <li>
-    <a href='https://eccv.ecva.net/'>VideoTIR: Accurate Understanding for Long Videos with Efficient Tool-Integrated Reasoning</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Zhe Gao, Shiyu Shen, Taifeng Chai, Weinong Wang, Haotian Xu, Xing W, <strong>Wenbin Li</strong>, Qi Fan, Yang Gao, Dacheng Tao.
-    <span style="color: #E74C3C">European Conference on Computer Vision (<strong>ECCV</strong>), 2026. (AC Rate = 27.5%) <br>
-  </li>
-
-
-  <li>
-    <a href='https://icml.cc/'>Don't Forget Why You Started: Tackling Dual Forgetting in Vision-Language Continual Learning</a> <br>
+    <a href="https://openreview.net/forum?id=OtuuZ68quP">Don't Forget Why You Started: Tackling Dual Forgetting in Vision-Language Continual Learning</a> <br>
     <span style="display: block; height: 5px;"></span>
     Borui Kang, Jinrui Gu, Tao Feng, Qi Fan, Yinghuan Shi, Lei Wang, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Yang Gao.
     <span style="color: #E74C3C">International Conference on Machine Learning (<strong>ICML</strong>), 2026. (AC Rate = 26.6%) <br>
-  </li>
+  <div class="publication-resources"><a class="button button4" href="https://openreview.net/forum?id=OtuuZ68quP">PDF</a> <a class="button button4" href="https://github.com/RL-MIND/DFA-MoE">Code</a> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public arXiv link found">arXiv</button></div>
+</li>
 
 
   <li>
-    <a href='https://icml.cc/'>The Shape of Addition: Geometric Structures of Arithmetic in Large Language Models</a> <br>
+    <a href="https://proceedings.mlr.press/v306/wen26l.html">The Shape of Addition: Geometric Structures of Arithmetic in Large Language Models</a> <br>
     <span style="display: block; height: 5px;"></span>
     Liuyuan Wen, Xun Zhu, Lihao Huang, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Yang Gao.
     <span style="color: #E74C3C">International Conference on Machine Learning (<strong>ICML</strong>), 2026. (AC Rate = 26.6%) <br>
-  </li>
+  <div class="publication-resources"><a class="button button4" href="https://proceedings.mlr.press/v306/wen26l.html">PDF</a> <a class="button button4" href="https://github.com/RL-MIND/Shape-of-Addition">Code</a> <a class="button button4" href="https://arxiv.org/abs/2606.03645">arXiv</a></div>
+</li>
 
 
   <li>
-    <a href='https://icml.cc/'>UHR-BAT: Budget-Aware Token Compression Vision-Language model for Ultra-High-Resolution Remote Sensing</a> <br>
+    <a href="https://openreview.net/forum?id=AWPKhE1dbc">UHR-BAT: Budget-Aware Token Compression Vision-Language model for Ultra-High-Resolution Remote Sensing</a> <br>
     <span style="display: block; height: 5px;"></span>
     Yunkai Dang, Minxin Dai, Yuekun Yang, Zhangnanli, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Feng Miao, Yang Gao.
     <span style="color: #E74C3C">International Conference on Machine Learning (<strong>ICML</strong>), 2026. (AC Rate = 26.6%) <br>
-  </li>
+  <div class="publication-resources"><a class="button button4" href="https://openreview.net/forum?id=AWPKhE1dbc">PDF</a> <a class="button button4" href="https://github.com/RL-MIND/UHR-BAT">Code</a> <a class="button button4" href="https://arxiv.org/abs/2604.13565">arXiv</a></div>
+</li>
 
-
-  <li>
-    <a href='https://icml.cc/'>SSR-Merge: Subspace Signal Routing for Training-Free LoRA Merging in Diffusion Models</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Zhengxuan Wei, Yi Dong, Zonghui Li, Xianhui Lin, Xing Liu, Hong Gu, Shaofeng Zhang, <strong>Wenbin Li</strong>, Qi Fan.
-    <span style="color: #E74C3C">International Conference on Machine Learning (<strong>ICML</strong>), 2026. (AC Rate = 26.6%) <br>
-  </li>
 
 
   <li>
-    <a href='https://cvpr.thecvf.com/'>Understanding and Enforcing Weight Disentanglement in Task Arithmetic</a> <br>
+    <a href="https://openaccess.thecvf.com/content/CVPR2026/html/Liu_Understanding_and_Enforcing_Weight_Disentanglement_in_Task_Arithmetic_CVPR_2026_paper.html">Understanding and Enforcing Weight Disentanglement in Task Arithmetic</a> <br>
     <span style="display: block; height: 5px;"></span>
     Shangge Liu, Yuehan Yin, Lei Wang, Qi Fan, Yinghuan Shi, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Yang Gao, Dacheng Tao.
     <span style="color: #E74C3C">The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2026. (AC Rate = 25.42%) <strong>[Oral]</strong> </span> <br>
-  </li>
+  <div class="publication-resources"><a class="button button4" href="https://openaccess.thecvf.com/content/CVPR2026/html/Liu_Understanding_and_Enforcing_Weight_Disentanglement_in_Task_Arithmetic_CVPR_2026_paper.html">PDF</a> <a class="button button4" href="https://github.com/RL-MIND/OrthoReg">Code</a> <a class="button button4" href="https://arxiv.org/abs/2604.17078">arXiv</a></div>
+</li>
 
 
-
-  <li>
-    <a href='https://cvpr.thecvf.com/'>SAME: Sparse and Anchored Model Editing for Heterogeneous Incremental Learning under Limited Data</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Zixuan Duan, Zeyu Zhang, Fengyuan Lu, Shaofeng Zhang, <strong>Wenbin Li</strong>, Qi Fan, Yang Gao.
-    <span style="color: #E74C3C">The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2026. (AC Rate = 25.42%) <strong>[Highlight]</strong> </span><br> 
-  </li>
 
 
   <li>
-    <a href='https://cvpr.thecvf.com/'>Selective, Regularized, and Calibrated: Harnessing Vision Foundation Models for Cross-Domain Few-Shot Semantic Segmentation</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Junyuan Ma, Xunzhi Xiang, <strong>Wenbin Li</strong>, Qi Fan, Yang Gao.
-    <span style="color: #E74C3C">The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2026. (AC Rate = 25.42%) </span> <br>
-  </li>
-
-  <li>
-    <a href='https://cvpr.thecvf.com/'>Prompt-Free Universal Region Proposal Network</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Qihong Tang, Changhan Liu, Shaofeng Zhang,<strong>Wenbin Li</strong>, Qi Fan, Yang Gao.
-    <span style="color: #E74C3C">The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2026. (AC Rate = 25.42%) </span> <br>
-  </li>
-
-
-  <li>
-    <a href='https://iclr.cc/'>Retain and Adapt: Auto-Balanced Model Editing for Open-Vocabulary Object Detection under Domain Shifts</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Zixuan Duan, Fengyuan Lu, Xunzhi Xiang, <strong>Wenbin Li</strong>, Yang Gao, Qi Fan. <br>
-    <span style="color: #E74C3C">The International Conference on Learning Representations (<strong>ICLR</strong>), 2026. (AC Rate = 28.0%) </span> <br>
-  </li>
-
-
-  <li>
-    <a href='https://iclr.cc/'>QPrompt-R1: Real-Time Reasoning for Domain-Generalized Semantic Segmentation via Group-Relative Query Alignment</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Fengyuan Lu, Zixuan Duan, Xunzhi Xiang, Zhicheng Zhang, <strong>Wenbin Li</strong>, Yang Gao, Qi Fan. <br>
-    <span style="color: #E74C3C">The International Conference on Learning Representations (<strong>ICLR</strong>), 2026. (AC Rate = 28.0%) </span> <br>
-  </li>
-
-  <li>
-    <a href='https://iclr.cc/'>Faster Parameter-Free Regret Matching Algorithms</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Linjian Meng, Youzhi Zhang, Shangdong Yang, <strong>Wenbin Li</strong>, Tianyu Ding, Yang Gao. <br>
-    <span style="color: #E74C3C">The International Conference on Learning Representations (<strong>ICLR</strong>), 2026. (AC Rate = 28.0%) </span> <br>
-  </li>
-
-
-  <li>
-    <a href='https://aaai.org/conference/aaai/aaai-26/'>Branch, or Layer? Zeroth-Order Optimization for Continual Learning of Vision-Language Models</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Ziwei Liu<sup style="font-size: 15px;">#</sup>, Borui Kang<sup style="font-size: 15px;">#</sup>, Wei Li, Hangjie Yuan, Yanbing Yang, <strong>Wenbin Li</strong>, Jun Luo, Yifan Zhu, Tao Feng.
-    <span style="color: #E74C3C">The 40th Annual AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), 2026. (AC Rate = 17.6%) </span> <br>
-  </li>
-
-  <li>
-    <a href='https://neurips.cc/'>Last-Iterate Convergence of Smooth Regret Matching+ Variants in Learning Nash Equilibria</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Linjian Meng, Youzhi Zhang, Zhenxing Ge, Tianyu Ding, Shangdong Yang, Zheng Xu, <strong>Wenbin Li</strong>, Yang Gao. <br>
-    <span style="color: #E74C3C">The Annual Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>), 2025. (AC Rate = 24.52%) </span> <br>
-  </li>
-
-  <li>
-    <a href='https://neurips.cc/'>Efficient Last-Iterate Convergence in Solving Extensive-Form Games</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Linjian Meng, Youzhi Zhang, Shangdong Yang, Tianyu Ding, Zhenxing Ge, <strong>Wenbin Li</strong>, Tianpei Yang, Bo An, Yang Gao.<br>
-    <span style="color: #E74C3C">The Annual Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>), 2025. (AC Rate = 24.52%) </span> <br>
-  </li>
-
-  <li>
-    <a href='https://neurips.cc/'>Don’t Need Retraining: A Mixture of DETR and Vision Foundation Models for Cross-Domain Few-Shot Object Detection</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Chang-Han Liu, Xunzhi Xiang, Zixuan Duan, <strong>Wenbin Li</strong>, Yang Gao, Qi Fan.<br>
-    <span style="color: #E74C3C">The Annual Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>), 2025. (AC Rate = 24.52%) </span> <br>
-  </li>
-
-  <li>
-    <a href='https://www.corl.org/'>AT-Drone: Benchmarking Adaptive Teaming in Multi-Drone Pursuit</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Yang Li, Junfan Chen, Feng Xue, Jiabin Qiu, <strong>Wenbin Li</strong>, Qingrui Zhang, Ying Wen, Wei Pan.
-    <span style="color: #E74C3C">The Conference on Robot Learning (<strong>CoRL</strong>), 2025. (AC Rate = 35.77%) </span> <br>
-    <button class="button button4"><a href="https://proceedings.mlr.press/v305/li25a.html">PDF</a></button>
-  </li>
-
-
-  <li>
-    <a href='https://iccv.thecvf.com/'>Dynamic Multi-Layer Null Space Projection for Vision-Language Continual Learning</a> <br>
+    <a href="https://ieeexplore.ieee.org/document/11443551">Dynamic Multi-Layer Null Space Projection for Vision-Language Continual Learning</a> <br>
     <span style="display: block; height: 5px;"></span>
     Borui Kang, Lei Wang, Zhiping Wu, Tao Feng, Yawen Li, Yang Gao, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>. <br>
     <span style="color: #E74C3C">International Conference on Computer Vision (<strong>ICCV</strong>), 2025. (AC Rate = 24.0%) </span> <br>
-     <button class="button button4"><a href="https://iccv.thecvf.com/virtual/2025/poster/2466">PDF</a></button>
-     <button class="button button4"><a href="https://github.com/RL-VIG/DMNSP.git">Code</a></button>
-  </li>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/11443551">PDF</a> <a class="button button4" href="https://github.com/RL-VIG/DMNSP">Code</a> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public arXiv link found">arXiv</button></div>
+</li>
 
 
-  <li>
-    <a href='https://iccv.thecvf.com/'>Adapting In-Domain Few-Shot Segmentation to New Domains without Retraining</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Qi Fan, Kai-Qi Liu, Nian Liu, Hisham Cholakkal, Rao Muhammad Anwer, <strong>Wenbin Li</strong>, Yang Gao. <br>
-    <span style="color: #E74C3C">International Conference on Computer Vision (<strong>ICCV</strong>), 2025. (AC Rate = 24.0%) </span> <br>
-    <!-- <button class="button button4"><a href="https://github.com/yychen016/BiMC">Code</a></button> -->
-  </li>
 
-
-  <li>
-    <a href='https://icml.cc/virtual/2025/poster/45762'>Reducing Variance of Stochastic Optimization for Approximating Nash Equilibria in Normal-Form Games</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Linjian Meng, Youzhi Zhang, Wubing Chen, <strong>Wenbin Li</strong>, Tianpei Yang, and Yang Gao. <br>
-    <span style="color: #E74C3C">International Conference on Machine Learning (<strong>ICML</strong>), 2025. <strong>[Spotlight poster]</strong> (AC Rate = 2.6%)</span> <br>
-    <!-- <button class="button button4"><a href="https://github.com/yychen016/BiMC">Code</a></button> -->
-  </li>
 
 
  <li>
-    <a href='https://cvpr.thecvf.com/virtual/2025/poster/33478'>Enhancing Few-Shot Class-Incremental Learning via Training-Free Bi-Level Modality Calibration</a> <br>
+    <a href="https://ieeexplore.ieee.org/document/11094801">Enhancing Few-Shot Class-Incremental Learning via Training-Free Bi-Level Modality Calibration</a> <br>
     <span style="display: block; height: 5px;"></span>
     Yiyang Chen, Tianyu Ding, Lei Wang, Jing Huo, Yang Gao, and <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>. <br>
     <span style="color: #E74C3C">Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2025. (AC Rate = 22.1%)</span> <br>
-    <button class="button button4"><a href="https://openaccess.thecvf.com/content/CVPR2025/papers/Chen_Enhancing_Few-Shot_Class-Incremental_Learning_via_Training-Free_Bi-Level_Modality_Calibration_CVPR_2025_paper.pdf">PDF</a></button>
-    <button class="button button4"><a href="https://github.com/yychen016/BiMC">Code</a></button>
- </li>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/11094801">PDF</a> <a class="button button4" href="https://github.com/RL-MIND/BiMC">Code</a> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public arXiv link found">arXiv</button></div>
+</li>
 
   <li>
-    <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Deng_Exploiting_Inter-sample_and_Inter-feature_Relations_in_Dataset_Distillation_CVPR_2024_paper.html">Exploiting Inter-sample and Inter-feature Relations in Dataset Distillation</a> <br>
+    <a href="https://ieeexplore.ieee.org/document/10656653">Exploiting Inter-sample and Inter-feature Relations in Dataset Distillation</a> <br>
     <span style="display: block; height: 5px;"></span>
     Wenxiao Deng, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Tianyu Ding, Lei Wang, Hongguang Zhang, Kuihua Huang, Jing Huo, and Yang Gao. <br>
     <span style="color: #E74C3C">Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2024. (AC Rate = 23.6%)</span> <br>
-    <button class="button button4"><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Deng_Exploiting_Inter-sample_and_Inter-feature_Relations_in_Dataset_Distillation_CVPR_2024_paper.html">PDF</a></button>
-    <button class="button button4"><a href="https://github.com/VincenDen/IID">Code</a></button>
-    <button class="button button4"><a href="https://arxiv.org/abs/2404.00563">arXiv</a></button>
-  </li>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/10656653">PDF</a> <a class="button button4" href="https://github.com/VincenDen/IID">Code</a> <a class="button button4" href="https://arxiv.org/abs/2404.00563">arXiv</a></div>
+</li>
 
-  <li>
-    <a href="https://openreview.net/forum?id=JV84NVo1em">Safe and Robust Subgame Exploitation in Imperfect Information Games</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Zhenxing Ge, Zheng Xu, Tianyu Ding, Linjian Meng, Bo An, <strong>Wenbin Li</strong>, and Yang Gao.<br>
-    <span style="color: #E74C3C">International Conference on Machine Learning (<strong>ICML</strong>), 2024. (AC Rate = 27.5%)</span>  <br>
-    <button class="button button4"><a href="https://openreview.net/pdf?id=JV84NVo1em">PDF</a></button>
-  </li>
 
-  <li>
-    <a href="https://www.ijcai.org/proceedings/2024/0014.pdf">STAR: Spatio-Temporal State Compression for Multi-Agent Tasks with Rich Observations</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Chao Li, Yujing Hu, Shangdong Yang, Tangjie Lv, Changjie Fan, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Chongjie Zhang, Yang Gao<sup style="font-size: 15px;">*</sup>.<br>
-    <span style="color: #E74C3C">International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2024. (AC Rate = 14.3%)</span> <br>
-    <button class="button button4"><a href="https://www.ijcai.org/proceedings/2024/0014.pdf">PDF</a></button>
-  </li>
-
-  <li>
-    <a href="https://www.ijcai.org/proceedings/2024/170">DTS-TPT: Dual Temporal-Sync Test-time Prompt Tuning for Zero-shot Activity Recognition</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Rui Yan, Hongyu Qu, Xiangbo Shu,  <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Jinghui Tang, Tieniu Tan.<br>
-    <span style="color: #E74C3C">International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2024. (AC Rate = 14.3%)</span> <br>
-    <button class="button button4"><a href="https://www.ijcai.org/proceedings/2024/170">PDF</a></button>
-  </li>
-
-  <li>
-    <a href="https://openreview.net/forum?id=aHmNpLlUlb&amp;noteId=7DmKGOB0Hd">InsertNeRF: Instilling Generalizability into NeRF with HyperNet Modules</a> <br>
-    <span style="display: block; height: 5px;"></span>
-    Yanqi Bao, Tianyu Ding, Jing Huo, <strong>Wenbin Li</strong>, Yuxin Li, and Yang Gao.<br>
-    <span style="color: #E74C3C">International Conference on Learning Representations (<strong>ICLR</strong>), 2024. (AC Rate = 30.96%)</span> <br>
-   <button class="button button4"><a href="http://tianyuding.com/papers/insert-ICLR24.pdf">PDF</a></button>
-   <button class="button button4"><a href="https://github.com/bbbbby-99/InsertNeRF">Code</a></button>
-   <button class="button button4"><a href="https://arxiv.org/abs/2308.13897">arXiv</a></button>
-</li> 
 
 <li>
-  <a href="https://dl.acm.org/doi/abs/10.1609/aaai.v38i16.29694">Optimistic Value Instructors for Cooperative Multi-Agent Reinforcement Learning</a> <br>
-  <span style="display: block; height: 5px;"></span>
-  Chao Li , Yupeng Zhang, Jianqi Wang, Yujing Hu, Shaokang Dong, <strong>Wenbin Li</strong>, <br> Tangjie Lv, Changjie Fan, Yang Gao.<br>
-  <span style="color: #E74C3C">AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), 2024. (AC Rate = 23.75%)</span> <br>
- <button class="button button4"><a href="https://dl.acm.org/doi/abs/10.1609/aaai.v38i16.29694">PDF</a></button>
- <button class="button button4"><a href="https://dl.acm.org/doi/abs/10.1609/aaai.v38i16.29694">arXiv</a></button>
-</li> 
-
-<li>
-  <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/1a2b4aba905a16733ff199888ac8eec4-Paper-Conference.pdf">Efficient Subgame Refinement for Extensive-form Games</a><br>
+  <a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/1a2b4aba905a16733ff199888ac8eec4-Abstract-Conference.html">Efficient Subgame Refinement for Extensive-form Games</a><br>
   <span style="display: block; height: 5px;"></span> 
   Zhenxing Ge, Zheng Xu, Tianyu Ding, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, and Yang Gao*.<br>
    <span style="color: #E74C3C">Neural Information Processing Systems (<strong>NeurIPS</strong>), 2023. (AC Rate = 26.1%)</span> <br>
-   <button class="button button4"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/1a2b4aba905a16733ff199888ac8eec4-Paper-Conference.pdf">PDF</a></button>
-   <button class="button button4"><a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/1a2b4aba905a16733ff199888ac8eec4-Supplemental-Conference.pdf">Supplemental</a></button>
+  <div class="publication-resources"><a class="button button4" href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/1a2b4aba905a16733ff199888ac8eec4-Abstract-Conference.html">PDF</a> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public Code link found">Code</button> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public arXiv link found">arXiv</button></div>
 </li> 
 
-<li>
-  <a href="https://dl.acm.org/doi/10.1145/3581783.3613769">Where and How: Mitigating Confusion in Neural Radiance Fields from Sparse Inputs</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Yanqi Bao, Yuxin Li, Jing Huo, Tianyu Ding, Xinyue Liang, <strong>Wenbin Li</strong>, and Yang Gao.<br>
-  <span style="color: #E74C3C">ACM International Conference on Multimedia (<strong>ACM MM</strong>), 2023. (AC Rate = 29.3%)</span> <br>
- <button class="button button4"><a href="https://dl.acm.org/doi/10.1145/3581783.3613769">PDF</a></button>
- <button class="button button4"><a href="https://github.com/bbbbby-99/WaH-NeRF">Code</a></button>
- <button class="button button4"><a href="https://arxiv.org/abs/2308.02908">arXiv</a></button>
-</li> 
+
 
 <li>
-  <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_MAP_Towards_Balanced_Generalization_of_IID_and_OOD_through_Model-Agnostic_ICCV_2023_paper.pdf">MAP: Towards Balanced Generalization of IID and OOD through Model-Agnostic Adapters</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Min Zhang, Junkun Yuan, Yue He, <strong>Wenbin Li</strong>, Zhengyu Chen, Kun Kuang.<br>
-  <span style="color: #E74C3C">International Conference on Computer Vision (<strong>ICCV</strong>), 2023. (AC Rate = 25.0%) <strong>[Oral]</strong></span> <br>
- <button class="button button4"><a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Zhang_MAP_Towards_Balanced_Generalization_of_IID_and_OOD_through_Model-Agnostic_ICCV_2023_paper.pdf">PDF</a></button>
- <button class="button button4"><a href="https://github.com/remiMZ/MAP-ICCV23">Code</a></button>
-</li> 
-
-<li>
-  <a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Li_Modeling_Inter-Class_and_Intra-Class_Constraints_in_Novel_Class_Discovery_CVPR_2023_paper.pdf">Modeling Inter-Class and Intra-Class Constraints in Novel Class Discovery</a><br>
+  <a href="https://ieeexplore.ieee.org/document/10203164">Modeling Inter-Class and Intra-Class Constraints in Novel Class Discovery</a><br>
   <span style="display: block; height: 5px;"></span>
   <strong>Wenbin Li</strong>, Zhichen Fan, Jing Huo, Yang Gao.<br>
   <span style="color: #E74C3C">IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2023. (AC Rate = 25.8%)</span> <br>
- <button class="button button4"><a href="https://openaccess.thecvf.com/content/CVPR2023/papers/Li_Modeling_Inter-Class_and_Intra-Class_Constraints_in_Novel_Class_Discovery_CVPR_2023_paper.pdf">PDF</a></button>
- <button class="button button4"><a href="https://github.com/FanZhichen/NCD-IIC.git">Code</a></button>
- <button class="button button4"><a href="https://arxiv.org/pdf/2210.03591.pdf">arXiv</a></button>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/10203164">PDF</a> <a class="button button4" href="https://github.com/FanZhichen/NCD-IIC">Code</a> <a class="button button4" href="https://arxiv.org/abs/2210.03591">arXiv</a></div>
 </li> 
 
-<li>
-  <a href="https://dl.acm.org/doi/10.1609/aaai.v37i10.26364">Learning Explicit Credit Assignment for Cooperative Multi-Agent Reinforcement Learning</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Wubing Chen, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Xiao Liu, Shangdong Yang, Yang Gao.<sup style="font-size: 15px;">*</sup><br>
-  <span style="color: #E74C3C">AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), 2023. (AC Rate = 19.6%) <strong>[Oral]</strong></span> <br>
- <button class="button button4"><a href="https://dl.acm.org/doi/10.1609/aaai.v37i10.26364">PDF</a></button>
- <button class="button button4"><a href="https://github.com/code-cultivater/MAPPG">Code</a></button>
- <button class="button button4"><a href="https://arxiv.org/pdf/2210.05367.pdf">arXiv</a></button>
-</li> 
+
+
 
 <li>
-  <a href="https://link.springer.com/chapter/10.1007/978-3-031-20044-1_26">Tree Structure-Aware Few-Shot Image Classification via Hierarchical Aggregation</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Min Zhang, Siteng Huang, <strong>Wenbin Li</strong>, Donglin Wang.<br>
- <span style="color: #E74C3C">European Conference on Computer Vision (<strong>ECCV</strong>), 2022. (AC Rate = 28.4%)</span> <br>
- <button class="button button4"><a href="https://link.springer.com/chapter/10.1007/978-3-031-20044-1_26">PDF</a></button>
- <button class="button button4"><a href="https://github.com/remiMZ/HTS-ECCV22.git">Code</a></button>
- <button class="button button4"><a href="https://arxiv.org/pdf/2207.06989.pdf">arXiv</a></button>
-</li> 
-
-<li>
-  <a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Gu_LoFGAN_Fusing_Local_Representations_for_Few-Shot_Image_Generation_ICCV_2021_paper.pdf">LoFGAN: Fusing Local Representations for Few-shot Image Generation</a><br>
+  <a href="https://ieeexplore.ieee.org/document/9710556">LoFGAN: Fusing Local Representations for Few-shot Image Generation</a><br>
   <span style="display: block; height: 5px;"></span>
   Zheng Gu<sup style="font-size: 15px;">#</sup>, <strong>Wenbin Li</strong><sup style="font-size: 15px;">#</sup>, Jing Huo, Lei Wang, Yang Gao.<br>
  <span style="color: #E74C3C">International Conference on Computer Vision (<strong>ICCV</strong>), 2021. (AC Rate = 26.2%)</span> <br>
- <button class="button button4"><a href="https://openaccess.thecvf.com/content/ICCV2021/papers/Gu_LoFGAN_Fusing_Local_Representations_for_Few-Shot_Image_Generation_ICCV_2021_paper.pdf">PDF</a></button>
- <button class="button button4"><a href="https://github.com/edward3862/LoFGAN-pytorch.git">Code</a></button>
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/9710556">PDF</a> <a class="button button4" href="https://github.com/edward3862/LoFGAN-pytorch">Code</a> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public arXiv link found">arXiv</button></div>
 </li> 
 
-<li>
-  <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://openaccess.thecvf.com/content/ICCV2021/papers/Huo_Manifold_Alignment_for_Semantically_Aligned_Style_Transfer_ICCV_2021_paper.pdf">Manifold Alignment for Semantically Aligned Style Transfer</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Jing Huo, Shiyin Jin, <strong>Wenbin Li</strong><sup style="font-size: 15px;">*</sup>, Jing Wu, Yu-Kun Lai, Yinghuan Shi, Yang Gao.<br>
- <span style="color: #E74C3C">International Conference on Computer Vision (<strong>ICCV</strong>), 2021. (AC Rate = 26.2%) </span> <br>
- <button class="button button4"><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://openaccess.thecvf.com/content/ICCV2021/papers/Huo_Manifold_Alignment_for_Semantically_Aligned_Style_Transfer_ICCV_2021_paper.pdf">PDF</a></button>
- <button class="button button4"><a href="https://github.com/NJUHuoJing/MAST.git">Code</a></button>
- <button class="button button4"><a href="https://arxiv.org/abs/2005.10777">arXiv</a></button>
-</li> 
 
 <li>
- <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ijcai.org/proceedings/2020/0409.pdf">Asymmetric Distribution Measure for Few-shot Learning</a><br>
+ <a href="https://www.ijcai.org/proceedings/2020/0409.pdf">Asymmetric Distribution Measure for Few-shot Learning</a><br>
  <span style="display: block; height: 5px;"></span>
  <strong>Wenbin Li</strong>, Lei Wang, Jing Huo, Yinghuan Shi, Yang Gao, Jiebo Luo.<br>
  <span style="color: #E74C3C">International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2020. (AC Rate = 12.6%) </span> <br>
- <button class="button button4"><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ijcai.org/proceedings/2020/0409.pdf">PDF</a></button>
- <button class="button button4"><a href="https://github.com/WenbinLee/ADM.git">Code</a></button>
- <button class="button button4"><a href="https://arxiv.org/abs/2002.00153">arXiv</a></button>
+  <div class="publication-resources"><a class="button button4" href="https://www.ijcai.org/proceedings/2020/0409.pdf">PDF</a> <a class="button button4" href="https://github.com/WenbinLee/ADM">Code</a> <a class="button button4" href="https://arxiv.org/abs/2002.00153">arXiv</a></div>
 </li> 
 
-<li>
-  <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ijcai.org/proceedings/2020/0100.pdf">Learning Task-aware Local Representations for Few-shot Learning</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Chuanqi Dong, <strong>Wenbin Li</strong>, Jing Huo, Zheng Gu, Yang Gao.<br>
-  <span style="color: #E74C3C">International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2020. (AC Rate = 12.6%) </span> <br>
-  <button class="button button4"><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ijcai.org/proceedings/2020/0100.pdf">PDF</a></button>
-  <button class="button button4"><a href="https://github.com/LegenDong/ATL-Net">Code</a></button>
- </li> 
+
 
  <li>
-  <a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ijcai.org/proceedings/2020/0443.pdf">Joint Multi-view 2D Convolutional Neural Networks for 3D Object Classification</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Jinglin Xu, Xiangsen Zhang, <strong>Wenbin Li</strong>, Xinwang Liu, Junwei Han.<br>
-  <span style="color: #E74C3C">International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2020. (AC Rate = 12.6%) </span> <br>
-  <button class="button button4"><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ijcai.org/proceedings/2020/0443.pdf">PDF</a></button>
-  <button class="button button4"><a href="chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ijcai.org/proceedings/2020/0443.pdf">arXiv</a></button>
- </li> 
-
- <li>
-  <a href="https://www.ijcai.org/proceedings/2020/93">Biased Feature Learning for Occlusion Invariant Face Recognition</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Changbin Shao, Jing Huo, Lei Qi, Zhen-Hua Feng, <strong>Wenbin Li</strong>, Chuanqi Dong, Yang Gao.<br>
-  <span style="color: #E74C3C">International Joint Conference on Artificial Intelligence (<strong>IJCAI</strong>), 2020. (AC Rate = 12.6%) </span> <br>
-  <button class="button button4"><a href="https://www.ijcai.org/proceedings/2020/93">PDF</a></button>
-  <button class="button button4"><a href="https://www.ijcai.org/proceedings/2020/93">arXiv</a></button>
- </li> 
-
- <li>
-  <a href="https://ojs.aaai.org/index.php/AAAI/article/view/6122">Deep Embedded Complementary and Interactive Information for Multi-view Classification</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Jinglin Xu, <strong>Wenbin Li</strong>, Xinwang Liu, Dingwen Zhang, Ji Liu, Junwei Han.<br>
-  <span style="color: #E74C3C">AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), 2020. (AC Rate = 20.6%) </span> <br>
-  <button class="button button4"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/6122">PDF</a></button>
-  <button class="button button4"><a href="https://github.com/xujinglin/MvNNcor">Code</a></button>
- </li> 
-
- <li>
-  <a href="https://ojs.aaai.org/index.php/AAAI/article/view/5927">Layerwise Sparse Coding for Pruned Deep Neural Networks with Extreme Compression Ratio</a><br>
-  <span style="display: block; height: 5px;"></span>
-  Xiao Liu, <strong>Wenbin Li</strong>, Jing Huo, Lili Yao, Yang Gao.<br>
-  <span style="color: #E74C3C">AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), 2020. (AC Rate = 20.6%) </span>  <br>
-  <button class="button button4"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/5927">PDF</a></button>
-  <button class="button button4"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/5927">arXiv</a></button>
- </li> 
-
- <li>
-  <a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper.pdf">Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning</a><br>
+  <a href="https://ieeexplore.ieee.org/document/8953758">Revisiting Local Descriptor based Image-to-Class Measure for Few-shot Learning</a><br>
   <span style="display: block; height: 5px;"></span>
   <strong>Wenbin Li</strong>, Lei Wang, Jinglin Xu, Jing Huo, Yang Gao, Jiebo Luo.<br>
   <span style="color: #E74C3C">IEEE Conference on Computer Vision and Pattern Recognition (<strong>CVPR</strong>), 2019. (AC Rate = 25.2%) </span> <br>
-  <button class="button button4"><a href="https://openaccess.thecvf.com/content_CVPR_2019/papers/Li_Revisiting_Local_Descriptor_Based_Image-To-Class_Measure_for_Few-Shot_Learning_CVPR_2019_paper.pdf">PDF</a></button>
-  <button class="button button4"><a href="https://github.com/WenbinLee/DN4.git">Code</a></button>
-  <button class="button button4"><a href="https://arxiv.org/abs/1903.12290">arXiv</a></button>
- </li> 
+  <div class="publication-resources"><a class="button button4" href="https://ieeexplore.ieee.org/document/8953758">PDF</a> <a class="button button4" href="https://github.com/NJUHuoJing/DN4">Code</a> <a class="button button4" href="https://arxiv.org/abs/1903.12290">arXiv</a></div>
+</li> 
 
  <li>
   <a href="https://ojs.aaai.org/index.php/AAAI/article/view/4885">Distribution Consistency based Covariance Metric Networks for Few-shot Learning</a><br>
   <span style="display: block; height: 5px;"></span>
   <strong>Wenbin Li</strong>, Jinglin Xu, Jing Huo, Lei Wang, Yang Gao, Jiebo Luo.<br>
   <span style="color: #E74C3C">AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), 2019. (AC Rate = 16.2%) <strong>[Oral]</strong> </span> <br>
-  <button class="button button4"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/4885">PDF</a></button>
-  <button class="button button4"><a href="https://github.com/WenbinLee/CovaMNet.git">Code</a></button>
- </li> 
+  <div class="publication-resources"><a class="button button4" href="https://ojs.aaai.org/index.php/AAAI/article/view/4885">PDF</a> <a class="button button4" href="https://github.com/NJUHuoJing/CovaMNet">Code</a> <button class="button button4 resource-unavailable" type="button" disabled title="No verified public arXiv link found">arXiv</button></div>
+</li> 
 
 </font></ol>
 
-
-
-
-
-<h2 id="datasets">Datasets & Frameworks</h2>
-<ol forward>
-<p style=text-align:justify> 
-<li style=text-align:justify><a href="https://github.com/RL-VIG/LibContinual.git"><b>LibContinual</b></a> is a comprehensive library for continual learning, especially for continual image classification. It integrates multiple classic continual methods into a unified framework. This library is friendly for beginners in continual learning with very concise code and clear structure. </li>
-
-<li style=text-align:justify><a href="https://github.com/RL-VIG/LibFewShot.git"><b>LibFewShot</b></a> is a comprehensive library for few-shot learning, especially for few-shot image classification. It integrates multiple classic FSL methods into a unified framework, including four fine-tuning based methods, six meta-learning based methods, and eight metric-learning based methods.</li>
-
-<li style=text-align:justify><a href="https://cs.nju.edu.cn/rl/WebCaricature.htm"><b>WebCaricature</b></a> dataset is developed for caricature recognition. 
-    It is a large photograph-caricature dataset consisting of 6042 caricatures and 5974 photographs from 252 persons collected from the web.</li><p>
-</ol>
 
 
 
@@ -1320,226 +1211,226 @@ I received my Ph.D. degree in <a href="http://cs.nju.edu.cn/" target="_blank">Sc
     <tbody>
       <tr>
         <td style="text-align: left;   width: 250px;"><b>Name</b></td>
-        <td style="text-align: center; width: 200px;"><b>Department<b></td>
-        <td style="text-align: center; width: 200px;"><b>Starting</b></td>
-        <td style="text-align: center; width: 200px;"><b>Graduated</b></td>
-        <td style="text-align: center; width: 200px;"><b>Program<b></td>
+        <td style="text-align: left; width: 200px;"><b>Department<b></td>
+        <td style="text-align: left; width: 200px;"><b>Starting</b></td>
+        <td style="text-align: left; width: 200px;"><b>Graduated</b></td>
+        <td style="text-align: left; width: 200px;"><b>Program<b></td>
         <td style="text-align: left;   width: 500px;"><b>First Job</b></td>
       </tr>
       <tr>
         <td style="text-align: left;">Dongdong Ren<sup style="font-size: 15px;">&dagger;</sup></td>
-        <td style="text-align: center;">ESE </td>
-        <td style="text-align: center;">2021.9 </td>
-        <td style="text-align: center;">2025.6</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">ESE </td>
+        <td style="text-align: left;">2021.9 </td>
+        <td style="text-align: left;">2025.6</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">吉利汽车</td>
       </tr>
       <tr>
         <td style="text-align: left;">Yuhang Zhu<sup style="font-size: 15px;">&dagger;</sup></td>
-        <td style="text-align: center;">ESE </td>
-        <td style="text-align: center;">2023.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">ESE </td>
+        <td style="text-align: left;">2023.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;"><a href='https://zhipingwoods.github.io/'>Zhiping Wu</a><sup style="font-size: 15px;">&dagger;</sup></td>
-        <td style="text-align: center;">ESE </td>
-        <td style="text-align: center;">2024.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">ESE </td>
+        <td style="text-align: left;">2024.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;">Yunchen Wu<sup style="font-size: 15px;">&dagger;</sup></td>
-        <td style="text-align: center;">CS </td>
-        <td style="text-align: center;">2024.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">CS </td>
+        <td style="text-align: left;">2024.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;"><a href='https://boringkey.github.io'>Borui Kang</a></td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2025.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
-        <td style="text-align: left;">-</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2025.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
+        <td style="text-align: left;"></td>
       </tr>
       <tr>
         <td style="text-align: left;"><a href='https://liuyuan-wen.github.io'>Liuyuan Wen</a></td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2025.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2025.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;"><a href='https://yunkaidang.github.io/'>Yunkai Dang</a></td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2025.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2025.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;"><a href='https://jcyang101.github.io/'>Jiacheng Yang</a></td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2025.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2025.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;"><a href='https://lshangge.github.io/'>Shangge Liu</a></td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2026.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
-        <td style="text-align: left;">-</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2026.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
+        <td style="text-align: left;"></td>
       </tr>
       <tr>
         <td style="text-align: left;">Jingyao Gong</td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2026.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2026.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;">Chengyu Zhouyang</td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2026.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">Ph.D.</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2026.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">Ph.D.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;">Ziyi Wang</td>
-        <td style="text-align: center;">CS</td>
-        <td style="text-align: center;">2020.9 </td>
-        <td style="text-align: center;">2023.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS</td>
+        <td style="text-align: left;">2020.9 </td>
+        <td style="text-align: left;">2023.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">壁仞科技</td>
       </tr>
       <tr>
         <td style="text-align: left;">Xuesong Yang</td>
-        <td style="text-align: center;">CS</td>
-        <td style="text-align: center;">2020.9 </td>
-        <td style="text-align: center;">2023.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS</td>
+        <td style="text-align: left;">2020.9 </td>
+        <td style="text-align: left;">2023.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">壁仞科技</td>
       </tr>
       <tr>
         <td style="text-align: left;">Boyao Shi</td>
-        <td style="text-align: center;">CS</td>
-        <td style="text-align: center;">2020.9 </td>
-        <td style="text-align: center;">2023.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS</td>
+        <td style="text-align: left;">2020.9 </td>
+        <td style="text-align: left;">2023.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">农业银行</td>
       </tr>
       <tr>
         <td style="text-align: left;">Jiayan Chen</td>
-        <td style="text-align: center;">CS</td>
-        <td style="text-align: center;">2020.9 </td>
-        <td style="text-align: center;">2023.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS</td>
+        <td style="text-align: left;">2020.9 </td>
+        <td style="text-align: left;">2023.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">华为</td>
       </tr>
       <tr>
         <td style="text-align: left;">Mengying Sun</td>
-        <td style="text-align: center;">CS</td>
-        <td style="text-align: center;">2021.9 </td>
-        <td style="text-align: center;">2024.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS</td>
+        <td style="text-align: left;">2021.9 </td>
+        <td style="text-align: left;">2024.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">美团</td>
       </tr>
       <tr>
         <td style="text-align: left;">Yakun Xiong</td>
-        <td style="text-align: center;">CS</td>
-        <td style="text-align: center;">2021.9 </td>
-        <td style="text-align: center;">2024.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS</td>
+        <td style="text-align: left;">2021.9 </td>
+        <td style="text-align: left;">2024.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">地平线</td>
       </tr>
       <tr>
         <td style="text-align: left;">Zhichen Fan</td>
-        <td style="text-align: center;">CS</td>
-        <td style="text-align: center;">2021.9 </td>
-        <td style="text-align: center;">2024.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS</td>
+        <td style="text-align: left;">2021.9 </td>
+        <td style="text-align: left;">2024.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">中国电信</td>
       </tr>
       <tr>
         <td style="text-align: left;">Wenxiao Deng</td>
-        <td style="text-align: center;">CS </td>
-        <td style="text-align: center;">2022.9 </td>
-        <td style="text-align: center;">2025.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS </td>
+        <td style="text-align: left;">2022.9 </td>
+        <td style="text-align: left;">2025.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">阿里淘天</td>
       </tr>
       <tr>
         <td style="text-align: left;">Yiyang Chen</td>
-        <td style="text-align: center;">CS </td>
-        <td style="text-align: center;">2023.9 </td>
-        <td style="text-align: center;">2026.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS </td>
+        <td style="text-align: left;">2023.9 </td>
+        <td style="text-align: left;">2026.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">快手</td>
       </tr>
       <tr>
         <td style="text-align: left;">Wei Lai</td>
-        <td style="text-align: center;">CS </td>
-        <td style="text-align: center;">2023.9 </td>
-        <td style="text-align: center;">2026.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS </td>
+        <td style="text-align: left;">2023.9 </td>
+        <td style="text-align: left;">2026.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">字节跳动</td>
       </tr>
       <tr>
         <td style="text-align: left;">Bing Li</td>
-        <td style="text-align: center;">CS </td>
-        <td style="text-align: center;">2023.9 </td>
-        <td style="text-align: center;">2026.6</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS </td>
+        <td style="text-align: left;">2023.9 </td>
+        <td style="text-align: left;">2026.6</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">中国移动</td>
       </tr>
       <tr>
         <td style="text-align: left;"><a href='https://lshangge.github.io/'>Shangge Liu</a></td>
-        <td style="text-align: center;">CS </td>
-        <td style="text-align: center;">2024.9 </td>
-        <td style="text-align: center;">2026.9</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">CS </td>
+        <td style="text-align: left;">2024.9 </td>
+        <td style="text-align: left;">2026.9</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">硕转博</td>
       </tr>
       <tr>
         <td style="text-align: left;">Jiaxin Li</td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2025.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2025.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;">Zhengjie Zhang</td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2025.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2025.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">-</td>
       </tr>
       <tr>
         <td style="text-align: left;">Yang Chen</td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2025.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">M.S.</td>
-        <td style="text-align: left;">-</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2025.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">M.S.</td>
+        <td style="text-align: left;"></td>
       </tr>
       <tr>
         <td style="text-align: left;">Yiru Shi</td>
-        <td style="text-align: center;">IS </td>
-        <td style="text-align: center;">2026.9 </td>
-        <td style="text-align: center;">in progress</td>
-        <td style="text-align: center;">M.S.</td>
+        <td style="text-align: left;">IS </td>
+        <td style="text-align: left;">2026.9 </td>
+        <td style="text-align: left;">in progress</td>
+        <td style="text-align: left;">M.S.</td>
         <td style="text-align: left;">-</td>
       </tr>
     </tbody>
@@ -1576,41 +1467,24 @@ I received my Ph.D. degree in <a href="http://cs.nju.edu.cn/" target="_blank">Sc
 
 
 <h2 id="awards">Awards</h2>
-<ul>
-<li>2026 南京大学智能科学与技术学院最喜爱的课程
-</li>
-<li>2025 南京大学优秀研究生德育导师
-</li>
-<li>2025 Best Student Paper Award at DSIS'25
-</li>
-<li>2025 中国指挥与控制学会科技进步奖二等奖
-</li>
-<li>2025 连续入选全球前2%顶尖科学家榜单（World's Top 2% Scientists）
-</li>
-<li>2025 中国计算机学会高级会员（CCF Senior Member）
-</li>
-<li>2025 南京大学姑苏青年学者
-</li>
-<li>2024 南京大学绿叶奖教金
-</li>
-<li>2023 中国科协青年人才托举
-</li>
-<li>2023 江苏省计算机学会青年科技奖
-</li>
-<li>2023 中国计算机学会人工智能会议优秀论文
-</li>
-<li>2021 江苏省双创博士
-</li>
-<li>2021 南京大学紫金学者
-</li>
-<li>2021 CAAI-华为MindSpore学术奖励基金
-</li>
-<li>2020 江苏省计算机学会优博
-</li>
-<li>2020 中国研究生人工智能创新大赛优秀指导教师
-</li>
+<ul class="awards-list">
+<li><span lang="en">2026 Most Popular Course Award, School of Intelligence Science and Technology, Nanjing University</span><br><span class="award-chinese" lang="zh-CN">2026 南京大学智能科学与技术学院最喜爱的课程</span></li>
+<li><span lang="en">2025 Outstanding Graduate Student Moral Education Mentor, Nanjing University</span><br><span class="award-chinese" lang="zh-CN">2025 南京大学优秀研究生德育导师</span></li>
+<li><span lang="en">2025 Best Student Paper Award, DSIS 2025</span><br><span class="award-chinese" lang="zh-CN">2025 DSIS 2025 最佳学生论文奖</span></li>
+<li><span lang="en">2025 Second Prize for Scientific and Technological Progress, Chinese Institute of Command and Control</span><br><span class="award-chinese" lang="zh-CN">2025 中国指挥与控制学会科技进步奖二等奖</span></li>
+<li><span lang="en">2025 World’s Top 2% Scientists</span><br><span class="award-chinese" lang="zh-CN">2025 连续入选全球前2%顶尖科学家榜单</span></li>
+<li><span lang="en">2025 Senior Member, China Computer Federation</span><br><span class="award-chinese" lang="zh-CN">2025 中国计算机学会高级会员</span></li>
+<li><span lang="en">2025 Gusu Young Scholar, Nanjing University</span><br><span class="award-chinese" lang="zh-CN">2025 南京大学姑苏青年学者</span></li>
+<li><span lang="en">2024 Green Leaf Teaching Award, Nanjing University</span><br><span class="award-chinese" lang="zh-CN">2024 南京大学绿叶奖教金</span></li>
+<li><span lang="en">2023 Young Elite Scientists Sponsorship Program, China Association for Science and Technology</span><br><span class="award-chinese" lang="zh-CN">2023 中国科协青年人才托举</span></li>
+<li><span lang="en">2023 Young Scientist Award, Jiangsu Computer Society</span><br><span class="award-chinese" lang="zh-CN">2023 江苏省计算机学会青年科技奖</span></li>
+<li><span lang="en">2023 Excellent Paper Award, CCF Conference on Artificial Intelligence</span><br><span class="award-chinese" lang="zh-CN">2023 中国计算机学会人工智能会议优秀论文</span></li>
+<li><span lang="en">2021 Jiangsu Innovation and Entrepreneurship Doctoral Talent Program</span><br><span class="award-chinese" lang="zh-CN">2021 江苏省双创博士</span></li>
+<li><span lang="en">2021 Zijin Scholar, Nanjing University</span><br><span class="award-chinese" lang="zh-CN">2021 南京大学紫金学者</span></li>
+<li><span lang="en">2021 CAAI–Huawei MindSpore Academic Award Fund</span><br><span class="award-chinese" lang="zh-CN">2021 CAAI-华为MindSpore学术奖励基金</span></li>
+<li><span lang="en">2020 Outstanding Doctoral Dissertation Award, Jiangsu Computer Society</span><br><span class="award-chinese" lang="zh-CN">2020 江苏省计算机学会优博</span></li>
+<li><span lang="en">2020 Outstanding Advisor Award, China Graduate AI Innovation Competition</span><br><span class="award-chinese" lang="zh-CN">2020 中国研究生人工智能创新大赛优秀指导教师</span></li>
 </ul>
-
 
 <h2 id="services">Services</h2>
 <ul class="plain-list">
@@ -1648,12 +1522,12 @@ I received my Ph.D. degree in <a href="http://cs.nju.edu.cn/" target="_blank">Sc
 </div>
 
 
-<!-- <div style="text-align: center; width: 800px; ">
+<!-- <div style="text-align: left; width: 800px; ">
     <a href="https://info.flagcounter.com/BEUM">
     <img src="https://s01.flagcounter.com/map/BEUM/size_s/txt_000000/border_CCCCCC/pageviews_1/viewers_0/flags_0/" alt="Flag Counter" border="0"></a>
 </div> -->
 
-<div class="visitor-map", style="text-align: center; width: 800px; ">
+<div class="visitor-map", style="text-align: left; width: 800px; ">
   <script type='text/javascript' id='mapmyvisitors' src='https://mapmyvisitors.com/map.js?cl=ffffff&w=450&t=tt&d=PpB3POPjusJfuaJbM7MTIInGEWwd23MwHXC-86J0lLQ&co=4b6191&cmo=3acc3a&cmn=ff5353&ct=fffcfc'></script>
 </div>
 
