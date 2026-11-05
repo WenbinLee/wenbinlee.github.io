@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" font-family="system-ui, sans-serif">
+  <rect width="320" height="150" fill="#fff"/>
+  <g fill="#fff" stroke="#c9d9ec">
+    <rect x="17" y="18" width="120" height="112" rx="12"/>
+    <rect x="195" y="18" width="108" height="112" rx="12"/>
+  </g>
+  <g fill="#20334d" font-size="13" font-weight="600" text-anchor="middle">
+    <text x="77" y="43">Support set</text>
+    <text x="249" y="43">Query</text>
+  </g>
+  <g fill="#3976c1">
+    <circle cx="58" cy="69" r="9"/>
+    <circle cx="96" cy="69" r="9"/>
+    <circle cx="249" cy="82" r="15"/>
+  </g>
+  <g fill="#158172">
+    <path d="M58 89l11 19H47z"/>
+    <path d="M96 89l11 19H85z"/>
+  </g>
+  <path d="M149 75h34m-9-8 9 8-9 8" fill="none" stroke="#42648a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="249" y="116" fill="#20334d" font-size="11" text-anchor="middle">Predicted class</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 150" font-family="system-ui, sans-serif">
+  <rect width="320" height="150" fill="#fff"/>
+  <g fill="#fff" stroke="#c9d9ec">
+    <rect x="12" y="22" width="82" height="104" rx="12"/>
+    <rect x="119" y="22" width="82" height="104" rx="12"/>
+    <rect x="226" y="22" width="82" height="104" rx="12"/>
+  </g>
+  <g fill="#20334d" font-size="14" font-weight="600">
+    <text x="24" y="48">Task 1</text>
+    <text x="131" y="48">Task 2</text>
+    <text x="238" y="48">Task 3</text>
+  </g>
+  <g fill="none" stroke="#42648a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M99 75h14m-5-5 5 5-5 5"/>
+    <path d="M206 75h14m-5-5 5 5-5 5"/>
+  </g>
+  <g fill="#3976c1">
+    <circle cx="53" cy="84" r="11"/>
+    <circle cx="145" cy="84" r="9"/>
+    <circle cx="244" cy="84" r="8"/>
+  </g>
+  <g fill="#158172">
+    <path d="m174 74 11 19h-22z"/>
+    <path d="m267 75 10 18h-20z"/>
+  </g>
+  <rect x="283" y="76" width="16" height="16" rx="3" fill="#9957b5"/>
+</svg>
